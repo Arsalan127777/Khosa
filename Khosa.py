@@ -446,4 +446,4 @@ def login_1(uid):
                 oks.append(uid)
                 break
             elif 'www.facebook.com' in res.get('error', {}).get('message', ''):
-                print(f"\r\r\x1b[1;
+                    print("\r\r\x1b[1;32m")
